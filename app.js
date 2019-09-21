@@ -17,6 +17,8 @@ const router = express.Router();
 const port = 1337;
 
 app.use(cors())
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 // don't show the log when it is test
 if (process.env.NODE_ENV !== 'test') {
@@ -31,8 +33,7 @@ router.use('/register', register);
 router.use('/login', login);
 app.use('/', router);
 
-app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
 
 
 
