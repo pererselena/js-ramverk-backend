@@ -3,14 +3,8 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
-    const data = {
-        data: {
-            msg: "week"
-        }
-    };
+var reports = require("../models/reports.js");
 
-    res.json(data);
-});
+router.get('/:week_nr', (req, res) => reports.getReport(res, req.params.week_nr));
 
 module.exports = router;
