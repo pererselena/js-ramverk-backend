@@ -5,10 +5,15 @@ const cors = require('cors');
 const morgan = require('morgan');
 const bodyParser = require("body-parser");
 
-const index = require('./routes/index');
-const hello = require('./routes/hello');
+const index = require('./routes/index.js');
+const reports = require('./routes/reports.js');
+const week = require('./routes/week.js');
+const register = require('./routes/register.js');
+const login = require('./routes/login.js');
+
 
 const app = express();
+const router = express.Router();
 const port = 1337;
 
 app.use(cors())
@@ -19,8 +24,12 @@ if (process.env.NODE_ENV !== 'test') {
     app.use(morgan('combined')); // 'combined' outputs the Apache style LOGs
 }
 
-app.use('/', index);
-app.use('/hello', hello);
+router.use('/', index);
+router.use('/reports', reports);
+router.use('/reports/week', week);
+router.use('/register', register);
+router.use('/login', login);
+app.use('/', router);
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
