@@ -62,4 +62,4 @@ app.use((err, req, res, next) => {
 });
 
 // Start up server
-app.listen(port, () => console.log(`Example API listening on port ${port}!`));
+app.listen(port, () => console.log(`Me API listening on port ${port}!`));
