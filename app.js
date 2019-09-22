@@ -8,8 +8,8 @@ const bodyParser = require("body-parser");
 const index = require('./routes/index.js');
 const reports = require('./routes/reports.js');
 const week = require('./routes/week.js');
-const register = require('./routes/register.js');
-const login = require('./routes/login.js');
+const auth = require('./models/auth.js');
+
 
 
 const app = express();
@@ -29,8 +29,9 @@ if (process.env.NODE_ENV !== 'test') {
 router.use('/', index);
 router.use('/reports', reports);
 router.use('/reports/week', week);
-router.use('/register', register);
-router.use('/login', login);
+router.post('/login', (req, res) => auth.login(res, req.body));
+router.post('/register', (req, res) => auth.register(res, req.body));
+
 app.use('/', router);
 
 
