@@ -20,6 +20,23 @@ const reports = {
             });
         });
     },
+    getAllReports: function (res, status=200) {
+        var sql = "SELECT * FROM reports";
+        db.all(sql, (err, reports) => {
+            if (err) {
+                return res.status(500).json({
+                    errors: {
+                        status: 500,
+                        title: "Database error",
+                        detail: err.message
+                    }
+                });
+            }
+            res.status(status).json({
+                data: reports
+            });
+        });
+    },
     createReport: function (res, body) {
         if (Number.isInteger(parseInt(body.week))) {
             db.run("INSERT INTO reports (week, report) VALUES (?, ?)",
