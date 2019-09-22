@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     const data = {
         data: {
             title: "Min me-sida i kursen jsramverk",
-            msg: `![Bild på mig](http://elenaperers.me/img/profileImg.jpg) { width=500 .me}
+            msg: `![Bild på mig](http://elenaperers.me/img/profileImg.jpg){width=500 .me}
 
 Mitt namn är Elena Perers. Född och uppvuxen i Barnaul, en stad som ligger Sydvästra Sibirien i Ryssland. Där växte jag upp, gick i skolan och universitetet.
 
