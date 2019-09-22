@@ -15,6 +15,8 @@ router.get('/', function(req, res, next) {
     res.json(data);
 });
 router.post('/', (req, res) => reports.createReport(res, req.body));
+router.put('/', (req, res) => reports.updateReport(res, req.body));
+router.delete('/', (req, res) => reports.deleteReport(res, req.body));
 
 
 module.exports = router;
