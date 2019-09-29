@@ -1,1 +1,1 @@
-[![Coverage Status](https://coveralls.io/repos/github/pererselena/js-ramverk-backend/badge.svg?branch=master)](https://coveralls.io/github/pererselena/js-ramverk-backend?branch=master)
+[![Build Status](https://travis-ci.org/pererselena/js-ramverk-backend.svg?branch=master)](https://travis-ci.org/pererselena/js-ramverk-backend)
