@@ -1,7 +1,6 @@
 'use strict';
 
 const db = require("../db/database.js");
-const validator = require("email-validator");
 
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');

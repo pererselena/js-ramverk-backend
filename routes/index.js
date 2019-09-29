@@ -3,10 +3,11 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
     const data = {
         data: {
             title: "Min me-sida i kursen jsramverk",
+            /* eslint max-len: [1, 600, 4] */
             msg: `![Bild på mig](https://elenaperers.me/img/profileImg.jpg)
 
 Mitt namn är Elena Perers. Född och uppvuxen i Barnaul, en stad som ligger Sydvästra Sibirien i Ryssland. Där växte jag upp, gick i skolan och universitetet.
