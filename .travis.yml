@@ -12,8 +12,8 @@ before_script:
     - npm install
 
 script:
-    - npm pretest
-    - npm test
+    - npm run pretest
+    - npm run test
 
 after_success:
     - npm run report-coveralls
