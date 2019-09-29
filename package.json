@@ -19,7 +19,9 @@
     "morgan": "^1.9.1",
     "sqlite3": "^4.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^6.2.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pererselena/js-ramverk-backend.git"
