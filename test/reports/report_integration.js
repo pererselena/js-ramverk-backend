@@ -17,7 +17,8 @@ describe('Reports', () => {
                     res.should.have.status(200);
                     res.body.should.be.an("object");
                     res.body.data.should.be.an("object");
-                    // res.body.data.length.should.be.above(0);
+                    res.body.data.week.should.be.an("string");
+                    res.body.data.week.length.should.be.above(0);
 
                     done();
                 });
@@ -32,7 +33,8 @@ describe('Reports', () => {
                     res.should.have.status(200);
                     res.body.should.be.an("object");
                     res.body.data.should.be.an("object");
-                    // res.body.data.length.should.be.above(0);
+                    res.body.data.week.should.be.an("string");
+                    res.body.data.week.length.should.be.above(0);
 
                     done();
                 });
